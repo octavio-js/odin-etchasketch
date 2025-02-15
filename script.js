@@ -1,35 +1,7 @@
-const mainDiv = document.querySelector("#main-div");
+const mainDiv = document.querySelector(".main-div");
 
-let div1 = document.createElement("div");
-let div2 = document.createElement("div");
-let div3 = document.createElement("div");
-let div4 = document.createElement("div");
-let div5 = document.createElement("div");
-let div6 = document.createElement("div");
-let div7 = document.createElement("div");
-let div8 = document.createElement("div");
-let div9 = document.createElement("div");
-let div10 = document.createElement("div");
-let div11 = document.createElement("div");
-let div12 = document.createElement("div");
-let div13 = document.createElement("div");
-let div14 = document.createElement("div");
-let div15 = document.createElement("div");
-let div16 = document.createElement("div");
-
-mainDiv.appendChild(div1);
-mainDiv.appendChild(div2);
-mainDiv.appendChild(div3);
-mainDiv.appendChild(div4);
-mainDiv.appendChild(div5);
-mainDiv.appendChild(div6);
-mainDiv.appendChild(div7);
-mainDiv.appendChild(div8);
-mainDiv.appendChild(div9);
-mainDiv.appendChild(div10);
-mainDiv.appendChild(div11);
-mainDiv.appendChild(div12);
-mainDiv.appendChild(div13);
-mainDiv.appendChild(div14);
-mainDiv.appendChild(div15);
-mainDiv.appendChild(div16);
+for(let i=0;i<256;i++){
+  let newDiv = document.createElement("div");
+  newDiv.classList.add("inside-div");
+  mainDiv.appendChild(newDiv);
+}
