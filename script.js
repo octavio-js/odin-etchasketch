@@ -1,6 +1,16 @@
 const mainDiv = document.querySelector(".main-div");
 const changeGridSizeButton = document.querySelector("#prompt-button");
 
+function randomColor(){
+  const chars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+  let hex = "#";
+  for(let i=0;i<6;i++){
+    index = Math.floor(Math.random() * 16);
+    hex = hex.concat(chars[index]);
+  }
+  return hex;
+}
+
 function createGrid(size){
   mainDiv.innerHTML = "";
   for(let i=0;i<size*size;i++){
@@ -14,7 +24,8 @@ function createGrid(size){
     div.style.height = `${widthHeight}px`;
 
     div.addEventListener("mouseover", function () {
-      div.style.backgroundColor = "white";
+      let hexValue = randomColor();
+      div.style.backgroundColor = `${hexValue}`;
     });
 
     mainDiv.appendChild(div);
