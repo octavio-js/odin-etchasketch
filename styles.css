@@ -1,17 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: khaki;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-div {
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   height: auto;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  width: 740px;
+  height: 740px;
 }
 
 .inside-div {
   margin: 0;
   padding: 0;
-  height: 92px;
-  width: 92px;
-  background-color: black;
 }
