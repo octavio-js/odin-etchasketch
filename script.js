@@ -15,7 +15,7 @@ function randomColor(){
 function createGrid(size){
   mainDiv.innerHTML = "";
   for(let i=0;i<size*size;i++){
-    const containerSize = 700;
+    const containerSize = 650;
     const widthHeight = containerSize / size;
 
     let div = document.createElement("div");
