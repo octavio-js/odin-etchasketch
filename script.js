@@ -1,5 +1,6 @@
 const mainDiv = document.querySelector(".main-div");
 const changeGridSizeButton = document.querySelector("#prompt-button");
+const clearGridButton = document.querySelector("#clear-grid-button");
 
 function randomColor(){
   const chars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
@@ -44,6 +45,14 @@ function changeGridSize() {
   createGrid(newSize);
 }
 
+function clearGrid(){
+  const insideDivs = document.querySelectorAll(".inside-div");
+  insideDivs.forEach(div => {
+    div.style.backgroundColor = ("transparent");
+  });
+}
+
 createGrid(16);
 
 changeGridSizeButton.addEventListener("click", changeGridSize);
+clearGridButton.addEventListener("click", clearGrid);
